@@ -21,7 +21,7 @@
     "cookie-session": "^2.0.0-alpha.1",
     "express": "^4.13.3",
     "moment": "^2.13.0",
-    "mysql": "2.10.2",
+    "mysql": "2.17.1",
     "promise": "^7.1.1",
     "request": "2.69.0",
     "virtual-input": "0.0.2",
