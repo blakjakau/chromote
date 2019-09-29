@@ -1,0 +1,124 @@
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(MaterialIcons-Regular.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+body { margin:0px; padding:0px; background:#222; }
+#main {
+	position:fixed;
+	text-align:center;
+	color:#fff;
+	background:#000;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+}
+
+#main .material-icons { line-height:64px; }
+#main .dc {	display:inline-block; }
+#main .link { display:none; }
+
+#main.ready .dc {	display:none; }
+#main.ready .link { display:inline-block; }
+#main.ready { background-color: #222; }
+#main.active.focus { background: #111115; }
+#main.active { background: #444; }
+
+/*#main.active { background: #222222; }*/
+  
+#main.ready.active .dc,
+#main.ready.active .link {display:none; }
+
+@keyframes rotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+#main.active logo {
+  top:50%;
+  left:50%;
+  margin-top:-50px;
+  margin-left:-50px;
+  position:absolute;
+  width:100px;
+  height:100px;
+  background: url('/images/chromote.png') no-repeat center center;
+  background-size:64px auto;
+  opacity:0.25;
+}
+
+/*#main.active.focus logo {*/
+/*  animation-name: rotation;*/
+/*  animation-duration: 2s;*/
+/*  animation-timing-function: linear;*/
+/*  animation-iteration-count: infinite;*/
+/*}*/
+#stream { display:none; }
+#input { opacity:0; }
+
+lightbar {
+  box-sizing:border-box;
+  background:#222;
+  height:100%;
+  width:100%;
+  padding:0 1px;
+  display:flex;
+  flex-direction:row;
+  max-height:3px;
+}
+
+
+
+lightbar light { display:inline-block; height:100%; flex-grow: 1; opacity:0.125;}
+lightbar .blue { background: #3284ff; }
+lightbar .red { background: #ff3424; }
+lightbar .orange { background: #ffbb00; }
+lightbar .green { background: #26b14c; }
+lightbar .purple { background: #bb00ff; }
+lightbar light:hover { opacity:1;}
+
+#main.active+#stream {
+  text-align:center;
+  display:block;
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  position:absolute;
+  bottom:64px;
+  left:0px; right:0px;
+  font-size: 16px;
+  font-family:console, fixed;
+  line-height:2.4em;
+  height:2.4em;
+  opacity:0.5;
+}

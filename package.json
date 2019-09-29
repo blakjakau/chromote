@@ -1,0 +1,38 @@
+{
+  "name": "chromemote",
+  "version": "0.0.1",
+  "description": "Proxy Keyboard and Mouse from any platform with a Chrome browser",
+  "repository": "",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "monitor": "nodemon -w app.js -w realtime.js -w hal"
+  },
+  "author": "jakbox.net",
+  "contributors": [
+    {
+      "name": "Jason Grima",
+      "email": "jason@jakbox.net"
+    }
+  ],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "cookie-parser": "^1.4.1",
+    "cookie-session": "^2.0.0-alpha.1",
+    "express": "^4.13.3",
+    "moment": "^2.13.0",
+    "mysql": "2.10.2",
+    "promise": "^7.1.1",
+    "request": "2.69.0",
+    "virtual-input": "0.0.2",
+    "websocket": "^1.0.22",
+    "winston": "^1.1.1",
+    "x11": "^2.3.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.8.0"
+  },
+  "engines": {
+    "node": ">=0.12.7"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "chromote",
+  "description": "Share your keyboard and mouse with PC from Chromebook",
+  "version": "0.1.2",
+  "icons": {
+    "128": "/images/chromote.png"
+  },
+  "app": {
+    "background": {
+      "scripts": [
+        "background.js"
+      ]
+    }
+  },
+   "permissions": [
+    "app.window.alwaysOnTop",
+    "app.window.shape",
+    "app.window.fullscreen",
+    "app.window.fullscreen.overrideEsc",
+    "clipboardRead",
+    "clipboardWrite",
+    "unlimitedStorage",
+    "notifications",
+    "alwaysOnTopWindows",
+    "pointerLock",
+    "system.network"
+  ],
+  "commands": {
+    "focus-chromote": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1",
+        "mac": "Command+Shift+1"
+      },
+      "description": "Bring Active Chromote connection to focus",
+      "global": true
+    }
+  }
+}
